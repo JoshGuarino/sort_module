@@ -8,5 +8,10 @@ class Sort:
         return arr
 
     def selection_sort(arr):
-        arr_len = len(arr_len)
-        
+        arr_len = len(arr)
+        for i in range(arr_len):
+            min_index = i
+            for j in range(min_index+1, arr_len):
+                    if arr[min_index] > arr[j]:
+                        min_index = j
+            arr[i], arr[min_index] = arr[min_index], arr[i]
